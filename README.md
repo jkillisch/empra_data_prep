@@ -46,7 +46,7 @@ Beispiel das Paket dplyr testweise laden, erscheint eine Warnung, dass
 die Funktionen filter, lag, intersect, setdiff, setequal und union durch
 das Paket dplyr maskiert werden. Wenn Sie nur eine Funktion aus einem
 Paket verwenden möchten, zum Beispiel die Funktion separate aus dem
-Paket tidyr, ist es sparsamer, die Funktion so abzurufen:
+Paket tidyr, ist es sparsamer, die Funktion explizit abzurufen,
 tidyr::separate, statt das ganze Paket zu laden.
 
 Laden Sie alle Pakete, die Sie im weiteren Skript benötigen, zu Beginn.
@@ -61,10 +61,8 @@ grammar, and data structures.*”
 
 Ein wichtiger Aspekt bei der Verwendung von tidyverse Paketen ist, dass
 Sie regelmäßigen Änderungen unterworfen sind. Dadurch veraltet Code im
-tidyverse Stil schneller als Code, den Sie mit base R schreiben.
-Insbesondere in der Entwicklung von eigenen Paketen versuchen einige
-Entwickler diese Abhängigkeit von stetigen Änderungen zu vermeiden. Da
-die Empra-Analysen nur einmal mit dem erhobenen Datensatz laufen müssen,
+tidyverse Stil schneller als Code, den Sie mit base R schreiben. Da die
+Empra-Analysen nur einmal mit dem erhobenen Datensatz laufen müssen,
 eignen sich die tidyverse Pakete sehr gut für diese Art von Analyse. Ich
 verwende hier die Pakete dplyr und ggplot2.
 

@@ -32,7 +32,7 @@ Wenn Sie mit sog. R-Projekten arbeiten, ist dieser Schritt nicht notwendig. Ich 
 
 ## Pakete laden
 
-Im Vorbereitungsschritt laden wir auch Pakete, die wir später benutzen wollen. Dazu kann man den Befehl library() verwenden, z.B. library(dplyr). Dadurch werden Funktionen des geladenen Pakets verfügbar. Generell ist es ratsam, sparsam mit geladenen Paketen umzugehen. Umso mehr Pakete Sie verwenden, desto wahrscheinlicher ist es, dass Ihr Skript nach einem Update desjenigen Pakets nicht mehr funktioniert. Darüber hinaus laden Sie mit jedem Paket eine Vielzahl von Funktionen, die u.U. andere Funktionen überschreiben. Wenn Sie zum Beispiel das Paket dplyr testweise laden, erscheint eine Warnung, dass die Funktionen filter, lag, intersect, setdiff, setequal und union durch das Paket dplyr maskiert werden. Wenn Sie nur eine Funktion aus einem Paket verwenden möchten, zum Beispiel die Funktion separate aus dem Paket tidyr, ist es sparsamer, die Funktion so abzurufen: tidyr::separate, statt das ganze Paket zu laden.
+Im Vorbereitungsschritt laden wir auch Pakete, die wir später benutzen wollen. Dazu kann man den Befehl library() verwenden, z.B. library(dplyr). Dadurch werden Funktionen des geladenen Pakets verfügbar. Generell ist es ratsam, sparsam mit geladenen Paketen umzugehen. Umso mehr Pakete Sie verwenden, desto wahrscheinlicher ist es, dass Ihr Skript nach einem Update desjenigen Pakets nicht mehr funktioniert. Darüber hinaus laden Sie mit jedem Paket eine Vielzahl von Funktionen, die u.U. andere Funktionen überschreiben. Wenn Sie zum Beispiel das Paket dplyr testweise laden, erscheint eine Warnung, dass die Funktionen filter, lag, intersect, setdiff, setequal und union durch das Paket dplyr maskiert werden. Wenn Sie nur eine Funktion aus einem Paket verwenden möchten, zum Beispiel die Funktion separate aus dem Paket tidyr, ist es sparsamer, die Funktion explizit abzurufen, tidyr::separate, statt das ganze Paket zu laden.
 
 Laden Sie alle Pakete, die Sie im weiteren Skript benötigen, zu Beginn. Hier lade ich die Pakete dplyr, tidyr und ggplot2. Die Pakete stammen aus dem sog. tidyverse:
 
@@ -40,7 +40,7 @@ Laden Sie alle Pakete, die Sie im weiteren Skript benötigen, zu Beginn. Hier la
 
 (https://www.tidyverse.org/)
 
-Ein wichtiger Aspekt bei der Verwendung von tidyverse Paketen ist, dass Sie regelmäßigen Änderungen unterworfen sind. Dadurch veraltet Code im tidyverse Stil schneller als Code, den Sie mit base R schreiben. Insbesondere in der Entwicklung von eigenen Paketen versuchen einige Entwickler diese Abhängigkeit von stetigen Änderungen zu vermeiden. Da die Empra-Analysen nur einmal mit dem erhobenen Datensatz laufen müssen, eignen sich die tidyverse Pakete sehr gut für diese Art von Analyse. Ich verwende hier die Pakete dplyr und ggplot2.
+Ein wichtiger Aspekt bei der Verwendung von tidyverse Paketen ist, dass Sie regelmäßigen Änderungen unterworfen sind. Dadurch veraltet Code im tidyverse Stil schneller als Code, den Sie mit base R schreiben. Da die Empra-Analysen nur einmal mit dem erhobenen Datensatz laufen müssen, eignen sich die tidyverse Pakete sehr gut für diese Art von Analyse. Ich verwende hier die Pakete dplyr und ggplot2.
 
 ```{r}
 # Load packages
