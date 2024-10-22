@@ -478,7 +478,7 @@ rm(dat)
 ```
 
 Mit diesen Funktionen können Sie schon viele Schritte der
-Datenaufbereitung lösen!
+Datenaufbereitung durchführen!
 
 ## Konventionen und Style
 
