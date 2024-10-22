@@ -186,7 +186,7 @@ tibble genau an. Wo finden Sie die folgenden Informationen?
 
 ### select()
 
-Als erstes testen wir die Grundfunktion select(). Verwenden Sie zuerst
+Zuerst testen wir die Grundfunktion select(). Verwenden Sie zuerst
 ?dplyr::select und lesen Sie den ersten Abschnitt der Dokumentation.
 Scrollen Sie ein wenig durch die darauf folgende Dokumentation und
 versuchen Sie einen Eindruck davon zu gewinnen, welche Möglichkeiten

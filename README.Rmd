@@ -113,7 +113,7 @@ Der Datensatz wird hier nach dem Speichern im Objekt dat in ein tidyverse-typisc
 
 ### select()
 
-Als erstes testen wir die Grundfunktion select(). Verwenden Sie zuerst ?dplyr::select und lesen Sie den ersten Abschnitt der Dokumentation. Scrollen Sie ein wenig durch die darauf folgende Dokumentation und versuchen Sie einen Eindruck davon zu gewinnen, welche Möglichkeiten bestehen. Schauen Sie sich dann die Beispiele im letzten Abschnitt der Dokumentation genauer an. Wenn Sie fertig sind, können Sie die folgenden Übungsaufgaben bearbeiten. Wenn im Kommentar ein "Example" steht, ist der nächste Codeabschnitt nur als Beispiel gedacht. Wenn im Kommentar ein "Task" steht, ist es Ihre Aufgabe, den darauffolgenden Code zu vervollständigen.
+Zuerst testen wir die Grundfunktion select(). Verwenden Sie zuerst ?dplyr::select und lesen Sie den ersten Abschnitt der Dokumentation. Scrollen Sie ein wenig durch die darauf folgende Dokumentation und versuchen Sie einen Eindruck davon zu gewinnen, welche Möglichkeiten bestehen. Schauen Sie sich dann die Beispiele im letzten Abschnitt der Dokumentation genauer an. Wenn Sie fertig sind, können Sie die folgenden Übungsaufgaben bearbeiten. Wenn im Kommentar ein "Example" steht, ist der nächste Codeabschnitt nur als Beispiel gedacht. Wenn im Kommentar ein "Task" steht, ist es Ihre Aufgabe, den darauffolgenden Code zu vervollständigen.
 
 ```{r}
 
