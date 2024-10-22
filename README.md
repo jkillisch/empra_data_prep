@@ -138,7 +138,7 @@ Los geht’s mit dem Mini-Tutorial! Mit dem folgenden Code speichern Sie
 einen Beispieldatensatz im Objekt dat, um die Grundfunktionen von dplyr
 zu üben. Der Datensatz iris ist bereits in R integriert und kann
 jederzeit über das Wort iris aufgerufen werden. Um mehr über den
-Datensatz zu erfahren, verwenden Sie ?iris. Die Bedeutung der Zeilen in
+Datensatz zu erfahren, verwenden Sie ?iris. Die Bedeutung der Spalten in
 iris ist im Folgenden nicht relevant, da es nur um die technische
 Funktionsweise der Grundfunktionen von dplyr geht.
 
