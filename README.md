@@ -171,7 +171,7 @@ dat
 Hier wird der Datensatz nach dem Speichern im dat-Objekt in ein
 tidyverse-typisches Datenformat, ein sogenanntes tibble, umgewandelt.
 tibbles unterscheiden sich kaum von data.frames. Die meisten
-Operationen, die Sie von data.frames kennen, können Sie auch auf Tibbles
+Operationen, die Sie von data.frames kennen, können Sie auch auf tibbles
 anwenden. Sie werden vielleicht auch feststellen, dass das tibble etwas
 übersichtlicher aussieht, wenn Sie es auf der Konsole ausgeben. Schauen
 Sie sich das tibble genau an. Wo finden Sie die folgenden Informationen?
