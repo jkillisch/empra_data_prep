@@ -168,13 +168,13 @@ dat
     ## 10          4.9         3.1          1.5         0.1 setosa 
     ## # ℹ 140 more rows
 
-Der Datensatz wird hier auch schon in ein tidyverse-typisches
-Datenformat, ein sog. tibble, umgewandelt. tibbles unterscheiden sich
-kaum von data.frames. Die meisten Operationen, die Sie von data.frames
-kennen, können Sie auch auf tibbles anwenden. Eventuell fällt Ihnen auch
-auf, dass der tibble etwas übersichtlicher aussieht, wenn man ihn in der
-Konsole ausgibt. Schauen Sie sich den tibble genau an. Wo finden Sie die
-folgenden Informationen?
+Der Datensatz wird hier nach dem Speichern im Objekt dat in ein
+tidyverse-typisches Datenformat, ein sog. tibble, umgewandelt. tibbles
+unterscheiden sich kaum von data.frames. Die meisten Operationen, die
+Sie von data.frames kennen, können Sie auch auf tibbles anwenden.
+Eventuell fällt Ihnen auch auf, dass der tibble etwas übersichtlicher
+aussieht, wenn man ihn in der Konsole ausgibt. Schauen Sie sich den
+tibble genau an. Wo finden Sie die folgenden Informationen?
 
 - Die Anzahl an Zeilen und Spalten
 
