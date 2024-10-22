@@ -544,7 +544,7 @@ erklärt werden.
 Best-practice wäre die Versionierung des Projekts über Git bzw. über die
 Plattform GitHub. Eine Einführung in GitHub würde über dieses Tutorial
 hinausgehen und wäre für ein Empra zu viel verlangt. Melden Sie sich
-aber gerne, falls Sie doch GitHub arbeiten möchten!
+aber gerne, falls Sie doch mit GitHub arbeiten möchten!
 
 ## Datenaufbereitung
 
