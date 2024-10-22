@@ -127,7 +127,7 @@ Nutzen Sie das Video, um zu verstehen, was die Grundfunktionen tun:
 
 In dieser Abbildung sind die Funktionen noch einmal zusammengefasst:
 
-![](dplyr_cheat_sheet/dplyr_graph/Folie1.png)
+![](dplyr_overview/dplyr_graph/Folie1.png)
 
 Falls Sie detailliertere Erklärungen der Funktionen benötigen, finden
 Sie hier eine passende Playlist:
