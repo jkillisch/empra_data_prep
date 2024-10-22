@@ -738,7 +738,7 @@ dplyr::rename_with(
 
 ### 3. Werte in Spalten verstehen und ggf. rekodieren
 
-Als nächstes schauen wir uns die einzelnen Spaltenwerte an. Nutzen Sie
+Als Nächstes schauen wir uns die einzelnen Spaltenwerte an. Nutzen Sie
 das Codebook, um zu verstehen, was ein konkreter Wert in einer Spalte
 bedeutet. Die folgenden Funktionen können dabei nützlich sein.
 
