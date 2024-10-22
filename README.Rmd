@@ -268,7 +268,7 @@ usw.
 
 Eine Möglichkeit, dieses Problem zu vermeiden, ist es eine Excel anzulegen, in der klar beschrieben ist, wie Dateien zu benennen sind und in der alle Änderungen an Dateien mit einem Datum und einer kurzen Notiz erklärt werden.
 
-Best-practice wäre die Versionierung des Projekts über Git bzw. über die Plattform GitHub. Eine Einführung in GitHub würde über dieses Tutorial hinausgehen und wäre für ein Empra zu viel verlangt. Melden Sie sich aber gerne, falls Sie doch GitHub arbeiten möchten!
+Best-practice wäre die Versionierung des Projekts über Git bzw. über die Plattform GitHub. Eine Einführung in GitHub würde über dieses Tutorial hinausgehen und wäre für ein Empra zu viel verlangt. Melden Sie sich aber gerne, falls Sie doch mit GitHub arbeiten möchten!
 
 ## Datenaufbereitung
 
