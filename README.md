@@ -3,11 +3,14 @@ Beispiel einer Datenaufbereitung mit dplyr
 Jan Killisch
 2024-10-22
 
-In diesem Dokument bereite ich für Studierende des empirischen
-Praktikums beispielhaft einen empirischen Datensatz auf. Senden Sie
-gerne jederzeit einen pull request auf GitHub.
+In this document, I show some basics of dplyr and prepare an empirical
+dataset for students that participate in a university course of mine.
+Feel free to send a pull request if you find an error. Also, feel to
+refer to this document in your own teaching.
 
-Sie können das Dokument auch gerne für Ihre eigene Lehre verwenden.
+Unfortunately, it’s all German. Sorry!
+
+------------------------------------------------------------------------
 
 # Vorbereitung Ihrer Arbeitsumgebung
 
