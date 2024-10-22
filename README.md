@@ -1,14 +1,14 @@
-Beispiel einer Datenaufbereitung mit dplyr
+Datenaufbereitung mit dplyr
 ================
 Jan Killisch
 2024-10-22
 
 In this document, I show some basics of dplyr and prepare an empirical
 dataset for students that participate in a university course of mine.
-Feel free to send a pull request if you find an error. Also, feel to
-refer to this document in your own teaching.
+Feel free to send a pull request if you find an error. Also, feel free
+to refer to this document in your own teaching.
 
-Unfortunately, it’s all German. Sorry!
+Unfortunately, it’s all German for now. Sorry!
 
 ------------------------------------------------------------------------
 

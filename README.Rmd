@@ -1,5 +1,5 @@
 ---
-title: "Beispiel einer Datenaufbereitung mit dplyr"
+title: "Datenaufbereitung mit dplyr"
 author: "Jan Killisch"
 date: "`r Sys.Date()`"
 output: rmarkdown::github_document
@@ -9,9 +9,9 @@ output: rmarkdown::github_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-In this document, I show some basics of dplyr and prepare an empirical dataset for students that participate in a university course of mine. Feel free to send a pull request if you find an error. Also, feel to refer to this document in your own teaching. 
+In this document, I show some basics of dplyr and prepare an empirical dataset for students that participate in a university course of mine. Feel free to send a pull request if you find an error. Also, feel free to refer to this document in your own teaching.
 
-Unfortunately, it's all German. Sorry!
+Unfortunately, it's all German for now. Sorry!
 
 ---
 
