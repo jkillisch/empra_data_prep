@@ -272,7 +272,7 @@ dplyr::select(dat, starts_with("Sepal"), Species)
 # dplyr::select(dat, <IHR CODE HIER>)
 ```
 
-Super! Sie haben die Grundfunktion select kennengelernt. Eventuell ist
+Sie haben die erste Grundfunktion, select, kennengelernt! Eventuell ist
 Ihnen dabei aufgefallen, dass ich die Funktion explizit mit dem Zusatz
 “dplyr::” verwende, obwohl das Paket dplyr geladen ist. Theoretisch ist
 das nicht nötig, da das Paket geladen ist. Ich möchte hier aber
@@ -478,8 +478,8 @@ dat <- dplyr::ungroup(dat)
 rm(dat)
 ```
 
-Mit diesen Funktionen kann Sie beim Schritt der Datenaufbereitung nichts
-mehr aufhalten!
+Mit diesen Funktionen können Sie schon viele Schritte der
+Datenaufbereitung lösen!
 
 ## Konventionen und Style
 

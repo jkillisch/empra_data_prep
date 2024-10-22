@@ -141,7 +141,7 @@ dplyr::select(dat, starts_with("Sepal"), Species)
 
 ```
 
-Super! Sie haben die Grundfunktion select kennengelernt. Eventuell ist Ihnen dabei aufgefallen, dass ich die Funktion explizit mit dem Zusatz "dplyr::" verwende, obwohl das Paket dplyr geladen ist. Theoretisch ist das nicht nötig, da das Paket geladen ist. Ich möchte hier aber sichergehen, dass R wirklich die Funktion select aus dplyr und keine andere Funktion mit dem gleichen Namen verwendet. Insbesondere bei der Funktion select habe ich oft die Erfahrung gemacht, dass es zu Namenskonflikten kommt, wenn noch andere Pakete geladen werden. Mit dem Befehl dplyr::select, können Sie das vermeiden. Theoretisch können Sie auch alle anderen Funktionen mit Hilfe des Zusatzes dplyr:: verwenden - das macht Ihren Code stabiler aber etwas schlechter lesbar. Mit der Zeit bekommt man ein Gefühl dafür, welche Funktionen man besser explizit aus einem Paket heraus verwenden sollte und bei welchen Funktionen ein Konflikt unwahrscheinlicher ist.
+Sie haben die erste Grundfunktion, select, kennengelernt! Eventuell ist Ihnen dabei aufgefallen, dass ich die Funktion explizit mit dem Zusatz "dplyr::" verwende, obwohl das Paket dplyr geladen ist. Theoretisch ist das nicht nötig, da das Paket geladen ist. Ich möchte hier aber sichergehen, dass R wirklich die Funktion select aus dplyr und keine andere Funktion mit dem gleichen Namen verwendet. Insbesondere bei der Funktion select habe ich oft die Erfahrung gemacht, dass es zu Namenskonflikten kommt, wenn noch andere Pakete geladen werden. Mit dem Befehl dplyr::select, können Sie das vermeiden. Theoretisch können Sie auch alle anderen Funktionen mit Hilfe des Zusatzes dplyr:: verwenden - das macht Ihren Code stabiler aber etwas schlechter lesbar. Mit der Zeit bekommt man ein Gefühl dafür, welche Funktionen man besser explizit aus einem Paket heraus verwenden sollte und bei welchen Funktionen ein Konflikt unwahrscheinlicher ist.
 
 ### filter()
 
@@ -226,7 +226,7 @@ rm(dat)
 
 ```
 
-Mit diesen Funktionen kann Sie beim Schritt der Datenaufbereitung nichts mehr aufhalten!
+Mit diesen Funktionen können Sie schon viele Schritte der Datenaufbereitung lösen!
 
 ## Konventionen und Style
 
