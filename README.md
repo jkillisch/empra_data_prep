@@ -90,8 +90,8 @@ library(ggplot2)
 *dplyr*
 
 Eventuell haben Sie noch nie mit dplyr gearbeitet. Das ist überhaupt
-nicht schlimm! Die Philosophie von dplyr ist es, mit etwa fünf
-Grundfunktionen und eventuell nötigen Zusatzfunktionen eine riesige
+nicht schlimm! Die Philosophie von dplyr ist es, mit wenigen
+Grundfunktionen und manchmal notwendigen Zusatzfunktionen eine große
 Menge an Datenoperationen zu ermöglichen. Wenn Sie die Grundfunktionen
 beherrschen, werden Ihnen Datenaufbereitungen in R viel leichter fallen.
 
