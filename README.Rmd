@@ -54,7 +54,7 @@ library(ggplot2)
 
 Eventuell haben Sie noch nie mit dplyr gearbeitet. Das ist überhaupt nicht schlimm! Die Philosophie von dplyr ist es, mit wenigen Grundfunktionen und manchmal notwendigen Zusatzfunktionen eine große Menge an Datenoperationen zu ermöglichen. Wenn Sie die Grundfunktionen beherrschen, werden Ihnen Datenaufbereitungen in R viel leichter fallen.
 
-*ggplot2*
+*tidyr und ggplot2*
 
 Mit tidyr und ggplot2 lassen sich viele Variationen von Plots erstellen. Hier können Sie sich einen Eindruck verschaffen: https://r-graph-gallery.com/ggplot2-package.html. ggplot2 erwartet Daten im sogenannten long-Datenformat. tidyr ist sehr gut dafür geeignet, Datenformate zu überführen und Daten für ggplot2 nutzbar zu machen. Daher lade ich die beiden Pakete zusammen.
 
