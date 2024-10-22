@@ -95,7 +95,7 @@ Grundfunktionen und manchmal notwendigen Zusatzfunktionen eine große
 Menge an Datenoperationen zu ermöglichen. Wenn Sie die Grundfunktionen
 beherrschen, werden Ihnen Datenaufbereitungen in R viel leichter fallen.
 
-*ggplot2*
+*tidyr und ggplot2*
 
 Mit tidyr und ggplot2 lassen sich viele Variationen von Plots erstellen.
 Hier können Sie sich einen Eindruck verschaffen:
