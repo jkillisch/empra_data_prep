@@ -104,11 +104,10 @@ Daten im sogenannten long-Datenformat. tidyr ist sehr gut dafür
 geeignet, Datenformate zu überführen und Daten für ggplot2 nutzbar zu
 machen. Daher lade ich die beiden Pakete zusammen.
 
-## Quick tutorial dplyr
+## Mini Tutorial dplyr
 
 Im Folgenden finden Sie Übungsaufgaben, um sich mit den Grundfunktionen
-von dplyr vertraut zu machen. Überspringen Sie diesen Teil nicht. Er
-erleichtert Ihnen die folgende Datenaufbereitung sehr.
+von dplyr vertraut zu machen.
 
 Schauen Sie als erstes dieses Einführungsvideo:
 
