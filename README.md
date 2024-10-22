@@ -3,12 +3,12 @@ Datenaufbereitung mit dplyr
 Jan Killisch
 2024-10-22
 
-In this document, I show some basics of dplyr and prepare an empirical
-dataset for students that participate in a university course of mine.
-Feel free to send a pull request if you find an error. Also, feel free
-to refer to this document in your own teaching.
+In this document I show some basics of dplyr and prepare an empirical
+dataset for students participating in a university course of mine. Feel
+free to submit a pull request if you find an error. Also feel free to
+use this document in your own teaching.
 
-Unfortunately, it’s all German for now. Sorry!
+It’s all in German at the moment. Sorry about that!
 
 ------------------------------------------------------------------------
 
@@ -16,42 +16,42 @@ Unfortunately, it’s all German for now. Sorry!
 
 ## Working Directory
 
-Im ersten Schritt legen Sie das *working directory* fest. Das ist der
-Ordner, in dem später Ihre Skripts, Daten, exportierte Plots, Dateien
-etc. liegen. Es ist sinnvoll, .R Dateien auf der obersten Ebene, also
-direkt im working directory, zu speichern. Darunter kann man die Ordner
-data, plots, ressources, notes etc. anlegen. Auf diese Ordner können Sie
-dann mit kurzen relativen Pfaden zugreifen.
+Im ersten Schritt legen Sie das *working directory* fest. Dies ist der
+Ordner, in dem sich später Ihre Skripte, Daten, exportierten Plots,
+Dateien usw. befinden werden. Es ist sinnvoll, die .R-Dateien auf der
+obersten Ebene, also direkt im working directory, abzulegen. Darunter
+können Sie die Ordner data, plots, resources, notes etc. anlegen. Auf
+diese Ordner kann dann mit kurzen relativen Pfaden zugegriffen werden.
 
 ``` r
 # Set working directory
 setwd("/Users/jankillisch/ls_landau/teaching/be1_empra/2024/example_data_prep")
 ```
 
-Wenn Sie mit sog. R-Projekten arbeiten, ist dieser Schritt nicht
-notwendig. Ich empfehle Ihnen bei den folgenden Analysen aber zunächst
-mit working directory zu arbeiten.
+Wenn Sie mit sogenannten R-Projekten arbeiten, ist dieser Schritt nicht
+notwendig. Ich empfehle jedoch, für die folgenden Analysen zunächst mit
+dem working directory zu arbeiten.
 
 ## Pakete laden
 
-Im Vorbereitungsschritt laden wir auch Pakete, die wir später benutzen
-wollen. Dazu kann man den Befehl library() verwenden, z.B.
-library(dplyr). Dadurch werden Funktionen des geladenen Pakets
-verfügbar. Generell ist es ratsam, sparsam mit geladenen Paketen
-umzugehen. Umso mehr Pakete Sie verwenden, desto wahrscheinlicher ist
-es, dass Ihr Skript nach einem Update desjenigen Pakets nicht mehr
-funktioniert. Darüber hinaus laden Sie mit jedem Paket eine Vielzahl von
-Funktionen, die u.U. andere Funktionen überschreiben. Wenn Sie zum
-Beispiel das Paket dplyr testweise laden, erscheint eine Warnung, dass
-die Funktionen filter, lag, intersect, setdiff, setequal und union durch
-das Paket dplyr maskiert werden. Wenn Sie nur eine Funktion aus einem
-Paket verwenden möchten, zum Beispiel die Funktion separate aus dem
-Paket tidyr, ist es sparsamer, die Funktion explizit abzurufen,
-tidyr::separate, statt das ganze Paket zu laden.
+In der Vorbereitungsphase werden auch Pakete geladen, die später
+verwendet werden sollen. Dazu kann der Befehl library() verwendet
+werden, z.B. library(dplyr). Dadurch werden die Funktionen des geladenen
+Packages verfügbar. Generell ist es ratsam, mit geladenen Paketen
+sparsam umzugehen. Je mehr Pakete Sie verwenden, desto wahrscheinlicher
+ist es, dass Ihr Skript nach einem Update des entsprechenden Pakets
+nicht mehr funktioniert. Außerdem laden Sie mit jedem Paket eine
+Vielzahl von Funktionen, die andere Funktionen überschreiben können.
+Wenn Sie beispielsweise das Paket dplyr zum Testen laden, wird eine
+Warnung angezeigt, dass die Funktionen filter, lag, intersect, setdiff,
+setequal und union durch das Paket dplyr überschrieben werden. Wenn Sie
+nur eine Funktion aus einem Paket verwenden wollen, z.B. die Funktion
+separate aus dem Paket tidyr, ist es effizienter, die Funktion
+tidyr::separate explizit aufzurufen, anstatt das ganze Paket zu laden.
 
-Laden Sie alle Pakete, die Sie im weiteren Skript benötigen, zu Beginn.
-Hier lade ich die Pakete dplyr, tidyr und ggplot2. Die Pakete stammen
-aus dem sog. tidyverse:
+Laden Sie zu Beginn alle Pakete, die Sie im weiteren Verlauf des Skripts
+benötigen. Ich lade hier die Pakete dplyr, tidyr und ggplot2. Die Pakete
+stammen aus dem sogenannten tidyverse:
 
 “*The tidyverse is an opinionated collection of R packages designed for
 data science. All packages share an underlying design philosophy,
@@ -60,11 +60,11 @@ grammar, and data structures.*”
 (<https://www.tidyverse.org/>)
 
 Ein wichtiger Aspekt bei der Verwendung von tidyverse Paketen ist, dass
-Sie regelmäßigen Änderungen unterworfen sind. Dadurch veraltet Code im
-tidyverse Stil schneller als Code, den Sie mit base R schreiben. Da die
-Empra-Analysen nur einmal mit dem erhobenen Datensatz laufen müssen,
-eignen sich die tidyverse Pakete sehr gut für diese Art von Analyse. Ich
-verwende hier die Pakete dplyr und ggplot2.
+sie regelmäßigen Änderungen unterliegen. Das bedeutet, dass Code im
+tidyverse Stil schneller veraltet als Code, der mit base R geschrieben
+wurde. Da die Empra-Analysen nur einmal mit dem gesammelten Datensatz
+ausgeführt werden müssen, eignen sich die tidyverse Pakete sehr gut für
+diese Art der Analyse. Ich verwende hier die Pakete dplyr und ggplot2.
 
 ``` r
 # Load packages
@@ -89,27 +89,27 @@ library(ggplot2)
 
 *dplyr*
 
-Eventuell haben Sie noch nie mit dplyr gearbeitet. Das ist überhaupt
-nicht schlimm! Die Philosophie von dplyr ist es, mit wenigen
-Grundfunktionen und manchmal notwendigen Zusatzfunktionen eine große
-Menge an Datenoperationen zu ermöglichen. Wenn Sie die Grundfunktionen
-beherrschen, werden Ihnen Datenaufbereitungen in R viel leichter fallen.
+Vielleicht haben Sie noch nie mit dplyr gearbeitet. Das ist nicht
+schlimm! Die Philosophie von dplyr ist es, mit wenigen Grundfunktionen
+und manchmal notwendigen Zusatzfunktionen eine große Menge an
+Datenoperationen zu ermöglichen. Wenn Sie die Grundfunktionen
+beherrschen, wird Ihnen die Datenaufbereitung in R viel leichter fallen.
 
 *tidyr und ggplot2*
 
-Mit tidyr und ggplot2 lassen sich viele Variationen von Plots erstellen.
-Hier können Sie sich einen Eindruck verschaffen:
+Mit tidyr und ggplot2 können viele verschiedene Plots erzeugt werden.
+Hier kann man sich einen Eindruck verschaffen:
 <https://r-graph-gallery.com/ggplot2-package.html>. ggplot2 erwartet
-Daten im sogenannten long-Datenformat. tidyr ist sehr gut dafür
-geeignet, Datenformate zu überführen und Daten für ggplot2 nutzbar zu
-machen. Daher lade ich die beiden Pakete zusammen.
+Daten im sogenannten long-Datenformat. tidyr ist sehr gut geeignet, um
+Datenformate zu konvertieren und für ggplot2 nutzbar zu machen. Deshalb
+lade ich die beiden Pakete zusammen.
 
 ## Mini Tutorial dplyr
 
-Im Folgenden finden Sie Übungsaufgaben, um sich mit den Grundfunktionen
+Im Folgenden finden Sie einige Übungen, um sich mit den Grundfunktionen
 von dplyr vertraut zu machen.
 
-Schauen Sie als erstes dieses Einführungsvideo:
+Sehen Sie sich zunächst dieses Einführungsvideo an:
 
 <https://www.youtube.com/watch?v=Gvhkp-Yw65U>
 
@@ -134,13 +134,13 @@ Sie hier eine passende Playlist:
 
 <https://www.youtube.com/playlist?list=PLyogaPCPr32W9wbszOANRJiAvUbbymcCS>
 
-Los geht’s mit dem mini-Tutorial! Mit dem folgenden Code speichern Sie
+Los geht’s mit dem Mini-Tutorial! Mit dem folgenden Code speichern Sie
 einen Beispieldatensatz im Objekt dat, um die Grundfunktionen von dplyr
-zu üben. Der Datensatz iris ist in R schon eingebaut und kann immer mit
-dem Wort iris abgerufen werden. Wenn Sie mehr über den Datensatz
-erfahren möchten, verwenden Sie ?iris. Die Bedeutung der Daten ist im
-Folgenden aber egal, da es nur um die technische Funktionsweise der
-dplyr Grundfunktionen geht.
+zu üben. Der Datensatz iris ist bereits in R integriert und kann
+jederzeit über das Wort iris aufgerufen werden. Um mehr über den
+Datensatz zu erfahren, verwenden Sie ?iris. Die Bedeutung der Zeilen in
+iris ist im Folgenden nicht relevant, da es nur um die technische
+Funktionsweise der Grundfunktionen von dplyr geht.
 
 ``` r
 # Load some example data built into R
@@ -168,13 +168,13 @@ dat
     ## 10          4.9         3.1          1.5         0.1 setosa 
     ## # ℹ 140 more rows
 
-Der Datensatz wird hier nach dem Speichern im Objekt dat in ein
-tidyverse-typisches Datenformat, ein sog. tibble, umgewandelt. tibbles
-unterscheiden sich kaum von data.frames. Die meisten Operationen, die
-Sie von data.frames kennen, können Sie auch auf tibbles anwenden.
-Eventuell fällt Ihnen auch auf, dass der tibble etwas übersichtlicher
-aussieht, wenn man ihn in der Konsole ausgibt. Schauen Sie sich den
-tibble genau an. Wo finden Sie die folgenden Informationen?
+Hier wird der Datensatz nach dem Speichern im dat-Objekt in ein
+tidyverse-typisches Datenformat, ein sogenanntes tibble, umgewandelt.
+tibbles unterscheiden sich kaum von data.frames. Die meisten
+Operationen, die Sie von data.frames kennen, können Sie auch auf Tibbles
+anwenden. Sie werden vielleicht auch feststellen, dass das tibble etwas
+übersichtlicher aussieht, wenn Sie es auf der Konsole ausgeben. Schauen
+Sie sich das tibble genau an. Wo finden Sie die folgenden Informationen?
 
 - Die Anzahl an Zeilen und Spalten
 
@@ -186,16 +186,15 @@ tibble genau an. Wo finden Sie die folgenden Informationen?
 
 ### select()
 
-Zuerst testen wir die Grundfunktion select(). Verwenden Sie zuerst
+Zuerst testen wir die Grundfunktion select(). Verwenden Sie zunächst
 ?dplyr::select und lesen Sie den ersten Abschnitt der Dokumentation.
-Scrollen Sie ein wenig durch die darauf folgende Dokumentation und
-versuchen Sie einen Eindruck davon zu gewinnen, welche Möglichkeiten
-bestehen. Schauen Sie sich dann die Beispiele im letzten Abschnitt der
-Dokumentation genauer an. Wenn Sie fertig sind, können Sie die folgenden
-Übungsaufgaben bearbeiten. Wenn im Kommentar ein “Example” steht, ist
-der nächste Codeabschnitt nur als Beispiel gedacht. Wenn im Kommentar
-ein “Task” steht, ist es Ihre Aufgabe, den darauffolgenden Code zu
-vervollständigen.
+Scrollen Sie ein wenig durch die folgende Dokumentation und versuchen
+Sie einen Eindruck von den Möglichkeiten zu bekommen. Schauen Sie sich
+dann die Beispiele im letzten Abschnitt der Dokumentation genauer an.
+Wenn Sie fertig sind, können Sie mit den folgenden Übungen beginnen.
+Wenn im Kommentar ein “Example” steht, ist der folgende Codeabschnitt
+nur als Beispiel gedacht. Wenn im Kommentar ein “Task” steht, ist es
+Ihre Aufgabe, den folgenden Code zu vervollständigen.
 
 ``` r
 # Example: Select the columns Sepal.Length, Sepal.Width, and Petal.Length
@@ -281,8 +280,8 @@ andere Funktion mit dem gleichen Namen verwendet. Insbesondere bei der
 Funktion select habe ich oft die Erfahrung gemacht, dass es zu
 Namenskonflikten kommt, wenn noch andere Pakete geladen werden. Mit dem
 Befehl dplyr::select, können Sie das vermeiden. Theoretisch können Sie
-auch alle anderen Funktionen mit Hilfe des Zusatzes dplyr:: verwenden -
-das macht Ihren Code stabiler aber etwas schlechter lesbar. Mit der Zeit
+auch alle anderen Funktionen mit Hilfe des Zusatzes dplyr:: verwenden.
+Das macht Ihren Code stabiler aber etwas schlechter lesbar. Mit der Zeit
 bekommt man ein Gefühl dafür, welche Funktionen man besser explizit aus
 einem Paket heraus verwenden sollte und bei welchen Funktionen ein
 Konflikt unwahrscheinlicher ist.
@@ -347,7 +346,7 @@ dplyr::filter(dat, Sepal.Length > 3, Petal.Length < 1.5)
 
 Die Funktion mutate() wird verwendet, um neue Variablen zu erstellen
 oder bestehende Variablen in einem Datensatz zu verändern. Schauen Sie
-sich wie zuvor die Dokumentation an (?dplyr::mutate). Lösen Sie dann die
+sich wie zuvor in die Dokumentation (?dplyr::mutate). Lösen Sie dann die
 Übungsaufgaben.
 
 ``` r
@@ -401,11 +400,11 @@ dplyr::mutate(dat, Sepal.Length = Sepal.Length * 10)
 ### group_by() und summarise()
 
 Wir beenden das Tutorial mit der Kombination der Funktionen group_by und
-summarise. Mit group_by gruppieren Sie den Datensatz anhand von
+summarise. Mit group_by gruppieren Sie den Datensatz nach ausgewählten
 Variablen, die im Datensatz enthalten sind. Anschließend können Sie die
-Funktion summarise verwenden, um die Reihen des Datensatzes in jeder
-dieser Gruppen zusammenzufassen. Lesen Sie zuerst ?dplyr::group_by und
-?dplyr::summarise. Bearbeiten Sie dann die Übungsaufgaben.
+Funktion summarise verwenden, um die Reihen des Datensatzes in jeder den
+definierten Gruppen zusammenzufassen. Lesen Sie zuerst ?dplyr::group_by
+und ?dplyr::summarise. Bearbeiten Sie dann die Übungsaufgaben.
 
 ``` r
 # Example: Compute the mean of Sepal.Length and the median of Sepal.Width 
@@ -484,7 +483,7 @@ Datenaufbereitung lösen!
 ## Konventionen und Style
 
 Jetzt ist auch ein guter Moment, um sich Gedanken über Schemata zur
-Bennennung von Ordnern und Objekten in R zu machen. Ich empfehle Ihnen,
+Benennung von Ordnern und Objekten in R zu machen. Ich empfehle Ihnen
 alle Wörter klein zu schreiben, Namenskomponenten mit Unterstrichen zu
 trennen und immer den Singular zu verwenden.
 
@@ -495,7 +494,7 @@ Lesen Sie am besten auch gleich einen Styleguide:
 <https://style.tidyverse.org/>
 
 Viele Style Richtlinien sind subjektiv. Am wichtigsten ist, dass Sie
-sich für einen Guide entscheiden und versuchen, sich konsistent daran zu
+sich für einen Guide entscheiden und versuchen sich konsistent daran zu
 halten.
 
 Ihnen fällt zu diesem Thema eventuell auch auf, dass ich Kommentare auf
@@ -511,8 +510,8 @@ tue ich das hier ebenfalls.
 Machen Sie sich jetzt schon Gedanken darüber, wie Sie in ein paar Wochen
 noch nachvollziehen können, welche Dateien zu welchen Analyseschritten
 gehören und wie Sie damit umgehen würden, wenn Sie Analyseschritte doch
-noch einmal wiederholen müssten. Versuchen Sie vor Allem zu vermeiden,
-ad-hoc Namen für Dateien zu verwenden, die man sich später nurnoch aus
+noch einmal wiederholen müssten. Versuchen Sie vor allem zu vermeiden,
+ad-hoc Namen für Dateien zu verwenden, die man sich später nur noch aus
 dem historischen Kontext erschließen kann.
 
 Negativbeispiel:
@@ -797,7 +796,7 @@ welche Bedeutung die Werte haben. Erstellen Sie dazu gerne eine Tabelle.
 
 Manchmal ist es nützlich, die Werte in einzelnen Spalten umzukodieren.
 Eine häufige Anwendung ist es, Werte zu NA umzuwandeln. Im
-Beispieldatensatz sind fehlende Werte schon korreckt kodiert. Zur
+Beispieldatensatz sind fehlende Werte schon korrekt kodiert. Zur
 Illustration wandeln wir im Folgenden dennoch alle Werte hair_color ==
 “none” zu NA um. Da wir dabei die Werte in der Spalte hair_color
 verändern, können wir die Funktion mutate verwenden.
