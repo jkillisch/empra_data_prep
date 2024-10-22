@@ -3,7 +3,7 @@ Datenaufbereitung mit dplyr
 Jan Killisch
 2024-10-22
 
-In this document I show some basics of dplyr and prepare an empirical
+In this document, I show some basics of dplyr and prepare an empirical
 dataset for students participating in a university course of mine. Feel
 free to submit a pull request if you find an error. Also feel free to
 use this document in your own teaching.
