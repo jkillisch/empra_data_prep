@@ -16,7 +16,7 @@ It’s all in German at the moment. Sorry about that!
 
 ## Working Directory
 
-Im ersten Schritt legen Sie das *working directory* fest. Dies ist der
+Im ersten Schritt legen Sie das *working directory* fest. Das ist der
 Ordner, in dem sich später Ihre Skripte, Daten, exportierten Plots,
 Dateien usw. befinden werden. Es ist sinnvoll, die .R-Dateien auf der
 obersten Ebene, also direkt im working directory, abzulegen. Darunter
@@ -62,7 +62,7 @@ grammar, and data structures.*”
 Ein wichtiger Aspekt bei der Verwendung von tidyverse Paketen ist, dass
 sie regelmäßigen Änderungen unterliegen. Das bedeutet, dass Code im
 tidyverse Stil schneller veraltet als Code, der mit base R geschrieben
-wurde. Da die Empra-Analysen nur einmal mit dem gesammelten Datensatz
+wurde. Da die Empra-Analysen nur einmal mit dem erhobenen Datensatz
 ausgeführt werden müssen, eignen sich die tidyverse Pakete sehr gut für
 diese Art der Analyse. Ich verwende hier die Pakete dplyr und ggplot2.
 
