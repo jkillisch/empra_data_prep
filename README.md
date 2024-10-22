@@ -24,8 +24,6 @@ data, plots, ressources, notes etc. anlegen. Auf diese Ordner können Sie
 dann mit kurzen relativen Pfaden zugreifen.
 
 ``` r
-# Preparation ------------------------------------------------------------------
-
 # Set working directory
 setwd("/Users/jankillisch/ls_landau/teaching/be1_empra/2024/example_data_prep")
 ```
