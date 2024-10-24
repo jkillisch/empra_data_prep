@@ -571,7 +571,8 @@ Mehr Informationen finden Sie in der help-file: ?dplyr::starwars
 
 Prüfen Sie, welche Spalten im Datensatz vorhanden sind. Verwenden Sie
 das Codebook von SoSci Survey, um nachzuvollziehen, was die Spalten
-enthalten und entscheiden Sie, ob Sie die Spalten behalten möchten.
+enthalten und entscheiden Sie, ob Sie die Spalten behalten möchten. 
+Ich habe das Codebook zusammen mit den Daten auf OLAT hochgeladen.
 Nützliche Funktionen dafür sind:
 
 ``` r
