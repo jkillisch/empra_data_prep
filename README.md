@@ -32,7 +32,8 @@ Wenn Sie mit sogenannten R-Projekten arbeiten, ist dieser Schritt nicht
 notwendig. Ich empfehle jedoch, für die folgenden Analysen zunächst mit
 dem working directory zu arbeiten.
 
-Wenn Sie auf einem Windows PC arbeiten, ist es eventuell notwendig, "/" durch "\\" oder "//" zu ersetzen.
+Wenn Sie auf einem Windows PC arbeiten, ist es eventuell notwendig, "/" 
+durch "\\" oder "//" zu ersetzen.
 
 ## Pakete laden
 
